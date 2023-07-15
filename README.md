@@ -45,6 +45,23 @@ def compute(n):
 n = int(input("Enter an integer: "))
 compute(n)
 
+----------------------------------------------------------------------------------------------------------------------
+
+# Task 4
+![image](https://github.com/ArmanHussain786/ASDE_Assignments/assets/88603433/7f4bed76-411e-4fcb-bb92-7c13c62502dc)
+
+
+Step 1: Download the sample TSV file
+
+Step 2: Extract the first column and line numbers for 'Xerox' item with the following command awk -F'\t' '$1 ~ /^Xerox/ {print $1, FNR}' sample.tsv > output.tsv
+
+Step 3: Sort the rows by item name with the following command sort -k1 output.tsv -o output.tsv
+
+step 4: run this command & attach the output cat output.tsv | tee >(wc -l) | tee >(sha1sum) | tail -5
+
+
+
+
 
 
 
