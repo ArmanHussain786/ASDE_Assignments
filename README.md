@@ -60,6 +60,15 @@ Step 3: Sort the rows by item name with the following command sort -k1 output.ts
 step 4: run this command & attach the output cat output.tsv | tee >(wc -l) | tee >(sha1sum) | tail -5
 
 
+# Task 5
+
+For Linux
+   cat /etc/group
+
+For Windows Git-Bash
+   ls -l | awk '{print $3}' | sort | uniq -d
+
+
 
 
 
