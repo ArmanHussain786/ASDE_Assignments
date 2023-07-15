@@ -8,14 +8,21 @@ GROUP BY d.NAME                        -- Group the results by department name
 ORDER BY AVG(s.AMT) DESC               -- Sort the average salary in descending order
 LIMIT 3;                               -- Limit the output to the top 3 departments with the highest average salary
 
+--------------------------------------------------------------------------------------------------------------------------
+
 
 #Task 2
 
-import pandas as p
-employee = p.read_csv("C:\Users\ashis\Downloads\ASDE_Assignment\ASDE Assignment - Employees.csv")
-salary = p.read_csv("C:\Users\ashis\Downloads\ASDE_Assignment\ASDE Assignment - Salaries.csv")
-department = p.read_csv("C:\Users\ashis\Downloads\ASDE_Assignment\ASDE Assignment - Departments.csv")
-df = p.merge(department,employee, left_on='ID',right_on='DEPT_ID')
-data = p.merge(df,salary,left_on="ID_y",right_on='EMP_ID')
-output = data.groupby(['NAME_x'])['AMT'].mean()
-output.sort_values(ascending=False).head(3)
+import pandas as pd
+departments=pd.read_csv("C:\Users\mail2\OneDrive\Desktop\Assignment\ASDE-Departments.csv")
+employees=pd.read_csv("C:\Users\mail2\OneDrive\Desktop\Assignment\ASDE-Employees.csv")
+salaries=pd.read_csv("C:\Users\mail2\OneDrive\Desktop\Assignment\ASDE-Salaries.csv")
+df=pd.merge(departments,employees, left_on = 'ID',right_on='DEPT_ID')
+data=pd.merge(df,salaries,left_on='ID_y',right_on='EMP_ID')
+x=data.groupby(['NAME_x'])['AMT'].mean()
+x.sort_values(ascending=False).head(3)
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
