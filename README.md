@@ -11,7 +11,7 @@ LIMIT 3;                               -- Limit the output to the top 3 departme
 --------------------------------------------------------------------------------------------------------------------------
 
 
-#Task 2
+# Task 2
 
 import pandas as pd
 departments=pd.read_csv("C:\Users\mail2\OneDrive\Desktop\Assignment\ASDE-Departments.csv")
