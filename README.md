@@ -25,4 +25,26 @@ x.sort_values(ascending=False).head(3)
 
 -----------------------------------------------------------------------------------------------------------------------------
 
+# Task 3
+
+def compute(n):
+    if n < 10:
+        out = n ** 2
+    elif n < 20:
+        out = 1
+        for i in range(1, n-9):   //Here we need to change the value from (n-10)--> (n-9)
+            out *= i
+    else:
+        lim = n - 19              //Here alse from (n-20) --> (n-19)
+        out = lim * lim
+        out = out - lim
+        out = out / 2 
+    print(out)
+
+
+n = int(input("Enter an integer: "))
+compute(n)
+
+
+
 
